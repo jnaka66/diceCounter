@@ -7,13 +7,13 @@ numbers = [1,2,3,4,5,6,7,8,9,10,11,12]
 rolls = [0,0,0,0,0,0,0,0,0,0,0,0]
 
 def createBarGraph(numbers, rolls):
-    fig = plt.figure(figsize =(16, 9))
+    fig = plt.figure(figsize =(32, 18))
     rects = plt.bar(numbers, rolls, color='red', width=0.4)
-    plt.xticks(numbers)
+    plt.xticks(numbers, fontsize=20, weight = 'bold')
     plt.title('Dice Rolls', fontsize=14)
     plt.xlabel('Number', fontsize=14)
     plt.ylabel('Count', fontsize=14)
-    plt.yticks([0,1])
+    plt.yticks([0,1],fontsize=20, weight = 'bold')
     plt.grid(visible=True, which='major', axis='y')
     return fig, rects
 
@@ -46,6 +46,7 @@ layout = [  [sg.Text('Catan Dice Stats')],
 
 # Create the Window
 window = sg.Window('Catan Dice Counter', layout,finalize=True, element_justification='center', resizable=True)
+window.maximize()
 fig, rects = createBarGraph(numbers,rolls)
 draw_figure(window['-CANVAS-'].TKCanvas, fig)
 
