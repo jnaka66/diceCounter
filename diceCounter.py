@@ -4,8 +4,8 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 import numpy as np
 
 
-numbers = range(1,13)
-rolls = list(np.zeros(12).astype('int'))
+numbers = range(2,13)
+rolls = list(np.zeros(11).astype('int'))
 historyRolls=[]
 
 def createBarGraph(numbers, rolls):
