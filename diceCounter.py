@@ -67,7 +67,7 @@ while True:
         #print(int(window['-INPUT-'].get()) in numbers)
         if(window['-INPUT-'].get() != '' and int(window['-INPUT-'].get()) in numbers):
             print('You have submited %s'% window['-INPUT-'].get())
-            rolls[int(window['-INPUT-'].get())-1]+=1
+            rolls[int(window['-INPUT-'].get())-2]+=1
             historyRolls.append(int(window['-INPUT-'].get()))
             updateBarGraph(rolls, fig, rects)
             window['-INPUT-'].update('')
